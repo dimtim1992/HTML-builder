@@ -26,7 +26,7 @@ async function mainFile() {
         let data = '';
         stream.on('data', chunk => data += chunk);
         stream.on('end', () => {
-          fs.appendFile(path.join(__dirname, 'project-dist', 'bundle.css'), data, () => {});
+          fs.appendFile(path.join(__dirname, 'project-dist', 'bundle.css'), `\n ${data}`, () => {});
         });
         // const cssStyles = await fs.promises.readFile(path.join(__dirname, 'styles', item.name), 'utf-8', () => {});
         // await fs.promises.appendFile(path.join(__dirname, 'project-dist', 'bundle.css'), cssStyles, () => {});
@@ -44,7 +44,7 @@ async function mainFile() {
         let data = '';
         stream.on('data', chunk => data += chunk);
         stream.on('end', () => {
-          fs.appendFile(path.join(__dirname, 'project-dist', 'bundle.css'), data, () => {});
+          fs.appendFile(path.join(__dirname, 'project-dist', 'bundle.css'), `\n ${data}`, () => {});
         });
         // const cssStyles = await fs.promises.readFile(path.join(__dirname, 'styles', item.name), 'utf-8', () => {});
         // await fs.promises.appendFile(path.join(__dirname, 'project-dist', 'bundle.css'), cssStyles, () => {});
